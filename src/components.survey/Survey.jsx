@@ -3,6 +3,7 @@ import { Summary } from "./Summary"
 import { First } from "./First";
 import { Intro } from "./Intro";
 import { Second } from "./Second";
+import "./Survey.css"
 
 
 export const Survey = () => {

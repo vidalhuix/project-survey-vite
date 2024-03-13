@@ -28,3 +28,23 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.survey-container {
+background-color: rgba(0, 0, 0, .4);
+padding: 50px;
+margin-top: 100px;
+height: 400px;
+border: 10px;
+min-width: 500px;
+color: #deab81;
+}
+
+input {
+outline: none;
+border: none;
+background-color: rgba(221, 224, 226);
+border-radius: 4px;
+padding: 6px;
+font-size: 12px;
+color: rgba(57, 57, 57);
+}
