@@ -1,8 +1,11 @@
 :root{
-    --text-color: #deab81;
-    --button-color: hsl(45, 60%, 70%);
+    --text-color: #FFFFFF;
+    --button-color: #008080; 
     --hover-color: #e0a800;
-    --text-color: #212529;
+}
+
+.survey {
+    color: var(--text-color)
 }
 
 /* intro */
@@ -12,6 +15,7 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 .intro label {
@@ -43,6 +47,7 @@ input::placeholder{
 
 .question {
     margin: 25px 0px;
+    color: var(--text-color);
 }
 
 .container-question {
@@ -62,10 +67,12 @@ input::placeholder{
     width: 400px;
     justify-content: baseline;
     align-content: end;
+    color: var(--text-color);
 }
 
 .radio-option input {
     width: 15px;
+   
 }
 
 .radio-option {
@@ -76,12 +83,6 @@ input::placeholder{
 }
 
 /* Second Question */
-
-.yesNo-question {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 
 .container-question button {
     margin: 10px 20px;
@@ -100,4 +101,37 @@ input::placeholder{
  background-color: var(--hover-color);
  color: #fff;
     
+}
+
+
+/* Third Question */
+
+
+.container-question select {
+    appearance: none; /* Hide the default arrow */
+    background-color: var(--button-color); /* Set background color */
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Add border radius */
+    padding: 10px; /* Add padding */
+    width: 100%; /* Set width */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; 
+}
+
+.container-question:focus {
+    outline: none; /* Remove focus outline */
+    color: var(--hover-color);
+}
+
+.container-question::placeholder {
+    color: #999;
+    font-style: italic;
+
+ .container-question select-option {
+ padding: 10px;
+}
+
+}
+.container-question option[selected] {
+    background-color: #e0a800;
 }

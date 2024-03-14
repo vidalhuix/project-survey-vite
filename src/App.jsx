@@ -1,6 +1,6 @@
 
 
-import { Header } from "./Header";
+import { Header } from "./components.survey/Header";
 import { Survey } from "./components.survey/Survey";
 
 export const App = () => {
