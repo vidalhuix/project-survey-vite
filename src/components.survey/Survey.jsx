@@ -1,18 +1,22 @@
 //import { useState } from "react"
+import { Intro } from   "./Intro"
+import { Question1 } from "./Question1";
+import { Question2 } from "./Question2";
+import { Question3 } from "./Question3";
 import { Summary } from "./Summary"
-import { First } from "./First";
-import { Intro } from "./Intro";
-import { Second } from "./Second";
 import "./Survey.css"
-
 
 export const Survey = () => {
   return (
     <>
-    <Intro /> 
-    <First />
-    <Second />
-    <Summary />
+      <div className="survey-adhd">
+        <Intro /> 
+        <Question1 />
+        <Question2 />
+        <Question3 />
+        <button type="Submit">Submit</button>
+        <Summary />
+      </div> 
     </>
   )
 }
@@ -41,3 +45,6 @@ console.log(user, email)
 
     </form>
     {/* add questions */ 
+
+
+ 
