@@ -1,10 +1,8 @@
 import { useState } from "react";
+import { NextBackButtons } from "./NextBackButtons";
 
-export const Intro = () => {
-    const [inputs, setInputs] = useState({
-        username: '',
-        age: ''
-    });
+export const Intro = ({ onNext, onBack }) => {
+    const [inputs, setInputs] = useState({username: '', age: ''});
     
     const handleChange = (event) => {
       setInputs ({
@@ -20,8 +18,8 @@ export const Intro = () => {
     };
 
 return (
-    <div className="intro">
-       <label htmlFor="">Name:</label>
+    <div className="container-question, intro">
+       <label htmlFor="">Type your name:</label>
         <input
             type="text"
             name="username"
@@ -33,7 +31,7 @@ return (
             required
         />
 
-       <label htmlFor="">Age:</label>
+       <label htmlFor="">Give your age:</label>
         <input
             type="number"
             name="age"
@@ -44,6 +42,8 @@ return (
             onFocus={handleFocus}
             required
         />
+        <NextBackButtons onNext={onNext} onBack={onBack}/>
     </div>
+
     )
 }

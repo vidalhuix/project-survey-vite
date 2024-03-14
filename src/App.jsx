@@ -1,16 +1,12 @@
-
-
-import { Header } from "./components.survey/Header";
 import { Survey } from "./components.survey/Survey";
 
 export const App = () => {
   return(
-<>
-<Header />
-<Survey />
-</>
+    <>
+      <Survey />
+    </>
   ) 
-};
+}
 
 /*# Requirements:
 - Your survey should consist of at least 3 questions.

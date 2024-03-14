@@ -1,11 +1,12 @@
 import { useState } from "react"
+import { NextBackButtons } from "./NextBackButtons"
 
-export const Question1 = () => {
-    const [first, setFirst] = useState("")
+export const Question1 = ({onNext, onBack}) => {
+  const [first, setFirst] = useState("")
 
-    const onRadioChange = (e) => {
-        setFirst(e.target.value)
-    }
+  const onRadioChange = (e) => {
+    setFirst(e.target.value)
+  }
 
 
   return (
@@ -56,6 +57,7 @@ export const Question1 = () => {
           />
           <label htmlFor="no"> Wait, was I supposed to have a to-do list?
           </label>
+          <NextBackButtons onNext={onNext} onBack={onBack}/>
         </div>
     </div>
   )
