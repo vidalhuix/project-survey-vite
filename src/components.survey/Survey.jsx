@@ -23,7 +23,7 @@ export const Survey = () => {
       case -1:
         return <Header onStartSurvey={goNext} />
       case 0:
-        return <Intro onNext={goNext} />
+        return <Intro onNext={goNext} />              
       case 1:
         return <Question1 onNext={goNext} onBack={goBack}/>
       case 2:
@@ -39,7 +39,6 @@ export const Survey = () => {
   
   return (
     <>
-      {currentQuestion === 0 ? <Header /> : null}
       <div>
         {renderCurrentQuestion()}
       </div>

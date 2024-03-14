@@ -30,18 +30,8 @@ p {
     color: #FFFFFF;
 }
 
-/* .survey-adhd {
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    width: 500px;
-    margin: auto;
-} */
-
-/* QUESTIONS -------------------------------------------------------------------------------------- */
-/* styles that affects all questions ---------------------------------------------------------------*/
+/* QUESTIONS ----------------------------------------------------------------------------------- */
+/* styles that affects all questions ------------------------------------------------------------*/
 
 .question {
     margin: 25px 0px;
@@ -49,13 +39,17 @@ p {
 }
 
 .container-question {
-    margin-bottom: 20px;
-    padding: 20px 40px;
+    background-color: var(--background-color);
+    margin-top: 50px;
+    padding: 40px;
+    padding-bottom: 15px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 550px;
+    height: 500px;
 }
 
 .container-question label{
@@ -73,12 +67,12 @@ input::placeholder{
 }
 
 input[type=text], input[type=number] {
+    margin: 20px;
     outline: none;
     border: none;
     background-color: var(--button-color);
     border-radius: 15px;
     padding: 6px;
-    font-size: 12px;
     color: var(--text-color);
     width: 100%;
     text-align: center;
@@ -99,56 +93,71 @@ button {
     color: rgb(255, 255, 255);
 }
 
+
 button.selected {
     background-color: var(--hover-color);
     color: #fff;
 }
 
-/* QUESTION0 - INTRO -------------------------------------------------------------------------------------- */
 
-.intro {
-    margin: 10px;
+.next-back-buttons {
     display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    color: var(--text-color);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    width: 100%;
+    align-self: end;
 }
 
-/* QUESTION1 ----------------------------------------------------------------------------------*/    
+.next-back-buttons button{
+    margin: 50px 0px 0px 0px;
 
-.radio-option label {
-    display: flex;
-    font-weight: lighter;
-    width: 400px;
-    justify-content: baseline;
-    align-content: end;
-    color: var(--text-color);
 }
 
-.radio-option input {
-    width: 15px;   
+
+
+/* QUESTION0 - INTRO --------------------------------------------------------------------------- */
+
+.intro label {
+    display: none;
 }
+
+/* QUESTION1 ------------------------------------------------------------------------------------*/  
 
 .radio-option {
-    margin-top: 5px;
-    margin-bottom: 10px;
     display: flex;
-    flex-direction: row-reverse;  
+    justify-content: space-between;
 }
 
-/* QUESTION2 -----------------------------------------------------------------------------------*/
+.radio-option label {
+    text-align: left;
+    display: inline;
+    font-weight: lighter;
+    color: var(--text-color);
+}
 
-/* QUESTION3 -----------------------------------------------------------------------------------*/
+
+.radio-option input[type="radio"]{
+    width: 15px;
+    float: right;
+}
+
+/* QUESTION2 ------------------------------------------------------------------------------------*/
+
+/* QUESTION3 ------------------------------------------------------------------------------------*/
 
 .container-question select {
     appearance: none; /* Hide the default arrow */
-    background-color: var(--button-color); /* Set background color */
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 15px; /* Add border radius */
+    color: var(--button-color);
+    background-color: white; /* Set background color */
+    box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Add border radius */
+    border: 3px solid var(--button-color);
     padding: 10px; /* Add padding */
     width: 100%; /* Set width */
     font-size: 16px; /* Set font size */
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .container-question:focus {
@@ -160,11 +169,28 @@ button.selected {
     color: #999;
     font-style: italic;
 
-.container-question select-option {
+.custome-select{
     padding: 10px;
 }
 
 }
 .container-question option[selected] {
     background-color: #e0a800;
+}
+
+/* MEDIA QUERIES------------------------------------------------------------------------------------ */
+/* MOBILE SCREENS 671px to 1024xp------------------------------------------------------------------- */
+@media (max-width:671px){
+    .container-question{
+        width: 100%;
+    }
+
+}
+/* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
+@media (min-width:671px) and (max-width:1024px){
+
+}
+/* TABLET SCREENS 671px to 1024xp------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+
 }
