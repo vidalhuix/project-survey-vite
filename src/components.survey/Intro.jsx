@@ -25,10 +25,7 @@ export const Intro = ({ onNext, onBack, setFormData }) => {
         }  
     }
 
-    const handleNext = () => {
-        // Pass the inputs state (username and age) to the onNext handler
-        onNext(inputs);
-    };
+   
     
 
 return (
