@@ -1,10 +1,16 @@
+import { Footer } from "./Footer"
 
-export const Header = () => {
+export const Header = ({ onStartSurvey }) => {
   return (
-    <div className="header-container">
+    <>
+      <div className="survey-container, header-container">
         <h1 className="header-text">A Day in the Life of an ADHDer</h1>
         <p>Welcome to our lighthearted survey designed to explore the quirks and nuances of living with ADHD! Whether you're a self-proclaimed multitasker extraordinaire or find yourself easily distracted by shiny objects, we invite you to share your experiences with us. This survey aims to capture the humor and relatability of navigating life with ADHD, so sit back, relax, and let's embark on this humorous journey together! 🚀</p>
-    </div>
+        <br/>
+        <button onClick={onStartSurvey}>Start survey</button>
+      </div>
+    <Footer />
+    </>
   )
 }
 
