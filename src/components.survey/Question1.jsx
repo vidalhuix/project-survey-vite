@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NextBackButtons } from "./NextBackButtons";
+import { BackNextButtons } from "./BackNextButtons";
 
 const options = [
   {
@@ -20,13 +20,15 @@ const options = [
   },
 ];
 
-export const Question1 = ({ onNext, onBack}) => {
+export const Question1 = ({ onNext, onBack, setFormData, setAnswer}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [fieldsFilled, setFieldsFilled] = useState(false);
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
     setFieldsFilled(true);
+    setAnswer(setSelectedOption) //update the answer for Quetsion 1
+    setFormData({ answer1: e.target.value}) // update the form data for Question1
   };
 
   return (
@@ -50,8 +52,9 @@ export const Question1 = ({ onNext, onBack}) => {
           </li>
         ))}
       </ul>
-      <NextBackButtons onNext={onNext} onBack={onBack} />
+      <BackNextButtons onNext={onNext} onBack={onBack} disabled={!fieldsFilled} />
     </div>
   );
 };
 
+//disabled={!fieldsFilled}/ the user can move further without choosing something

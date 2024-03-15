@@ -1,17 +1,22 @@
 import { useState } from "react";
-import { NextBackButtons } from "./NextBackButtons";
+import { BackNextButtons } from "./BackNextButtons";
 
-export const Intro = ({ onNext, onBack }) => {
+export const Intro = ({ onNext, onBack, setFormData }) => {
     const [inputs, setInputs] = useState({username: '', age: ''});
     const [fieldsFilled, setFieldsFilled] = useState(false);
 
     const handleChange = (event) => {
-        setInputs ({
-        ...inputs,
-        [event.target.name]: event.target.value
-        })
+        const { name, value } = event.target;
+        setInputs({
+            ...inputs,
+            [name]: value
+        });
         // Check if both fields are filled
         setFieldsFilled(inputs.username !== '' && inputs.age !== ''); 
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }));
     }
 
     const handleFocus = (event) =>{
@@ -47,7 +52,7 @@ return (
                 required
             />
         </div>
-        <NextBackButtons onNext={onNext} onBack={onBack} disabled={!fieldsFilled}/>
+        <BackNextButtons onNext={onNext} onBack={onBack} disabled={!fieldsFilled}/>
     </div>
     )
 }
