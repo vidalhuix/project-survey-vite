@@ -5,19 +5,21 @@ export const Intro = ({ onNext, onBack, setFormData }) => {
     const [inputs, setInputs] = useState({username: '', age: ''});
     const [fieldsFilled, setFieldsFilled] = useState(false);
 
+    
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setInputs({
-            ...inputs,
+        setInputs(prevInputs => ({
+            ...prevInputs,
             [name]: value
-        });
+        }));
         // Check if both fields are filled
-        setFieldsFilled(inputs.username !== '' && inputs.age !== ''); 
+        setFieldsFilled(value !== '' && inputs.age !== ''); 
         setFormData(prevFormData => ({
             ...prevFormData,
             [name]: value
         }));
     }
+    
 
     const handleFocus = (event) =>{
         if (event.target.name === 'age' || event.target.name === 'username') {

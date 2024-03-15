@@ -10,7 +10,6 @@ import "./Survey.css"
 export const Survey = () => {
   const [currentQuestion, setCurrentQuestion] = useState(-1)
   const [formData, setFormData] = useState({
-    name: "",
     age: "",
     answer1: "",
     answer2: "",

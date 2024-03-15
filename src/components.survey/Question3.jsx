@@ -16,6 +16,7 @@ export const Question3 = ({ onNext, onBack, setFormData }) => {
   }));
 };
 
+
   const handleFocus = (e) => {
     e.target.removeAttribute('placeholder')
   };
@@ -35,11 +36,11 @@ export const Question3 = ({ onNext, onBack, setFormData }) => {
         onChange={handleChange}
         onFocus={handleFocus}
         >
-        <option value=""> Select  an option 👇 </option> 
-        <option value="answer1">Just one, I am all about single-tasking</option>
-        <option value="answer2">A few, for necessary references.</option>
-        <option value="answer3">Too many to count, but they are all totally relevant... I think.</option>
-        <option value="answer4">My computer might crash if I close any of them.</option>
+        <option value="" disabled> Select  an option 👇 </option> 
+        <option value="Just one">Just one, I am all about single-tasking</option>
+        <option value="A few">A few, for necessary references.</option>
+        <option value="Too many to count">Too many to count, but they are all totally relevant... I think.</option>
+        <option value="My computer might crash if I close any of them.">My computer might crash if I close any of them.</option>
       </select>
       <BackSubmitButtons onNext={onNext} onBack={onBack} />
     </div>    
