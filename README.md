@@ -6,6 +6,6 @@ This weeks project was challenging, we did learn many things about accessivility
 
 It was difficult to work managing so many components and styling, passing their props and making the useState work properly.
 
-### View it live [here]
+### View it live [here](https://surveyformbyam.netlify.app/)
 
-https://surveyformbyam.netlify.app/
+
