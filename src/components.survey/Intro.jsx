@@ -3,12 +3,15 @@ import { NextBackButtons } from "./NextBackButtons";
 
 export const Intro = ({ onNext, onBack }) => {
     const [inputs, setInputs] = useState({username: '', age: ''});
-    
+    const [fieldsFilled, setFieldsFilled] = useState(false);
+
     const handleChange = (event) => {
-      setInputs ({
+        setInputs ({
         ...inputs,
         [event.target.name]: event.target.value
-      }) 
+        })
+        // Check if both fields are filled
+        setFieldsFilled(inputs.username !== '' && inputs.age !== ''); 
     }
 
     const handleFocus = (event) =>{
@@ -44,8 +47,7 @@ return (
                 required
             />
         </div>
-        <NextBackButtons onNext={onNext} onBack={onBack}/>
+        <NextBackButtons onNext={onNext} onBack={onBack} disabled={!fieldsFilled}/>
     </div>
-
     )
 }

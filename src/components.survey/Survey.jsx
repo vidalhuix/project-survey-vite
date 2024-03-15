@@ -23,7 +23,7 @@ export const Survey = () => {
       case -1:
         return <Header onStartSurvey={goNext} />
       case 0:
-        return <Intro onNext={goNext} />              
+        return <Intro onNext={goNext} onBack={goBack}/>              
       case 1:
         return <Question1 onNext={goNext} onBack={goBack}/>
       case 2:
@@ -46,19 +46,4 @@ export const Survey = () => {
   )
 }
 
-
-/*   return (
-    <>
-      <Header />
-      <div className="survey-adhd">
-        <Intro /> 
-        <Question1 />
-        <Question2 />
-        <Question3 />
-        <button type="Submit">Submit</button>
-        <Summary />
-      </div> 
-    </>
-  )
-} */
  

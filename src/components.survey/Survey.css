@@ -50,6 +50,7 @@ p {
     align-items: center;
     width: 550px;
     height: 500px;
+    position: relative;
 }
 
 .container-question label{
@@ -99,6 +100,7 @@ button.selected {
     color: #fff;
 }
 
+/* NEXT BACK BUTTON ---------------------------------------------------------------------- */
 
 .next-back-buttons {
     display: flex;
@@ -112,7 +114,18 @@ button.selected {
 
 .next-back-buttons button{
     margin: 50px 0px 0px 0px;
+}
 
+.warning-on {
+    display: none;  
+    color: red;
+    font-weight: lighter;
+    position: absolute;
+    bottom: 0px;    
+}
+
+.warning-off {
+   display: none;   
 }
 
 
